@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArticleController!{% endblock %}
+{% block title %}Show{% endblock %} 
 
 {% block body %}
 <style>
@@ -21,14 +21,12 @@
             </tr>
         </thead>
         <tbody>
-            {% for a in articles %}
-                <tr>
-                    <td>{{a.id}}</td>
-                    <td>{{a.title}}</td>
-                    <td>{{a.content|slice(0,300) ~ '...'}}<a href="http://nahuel.lpweb-lannion.fr:7775/article/{{a.id}}">Voir plus ...</a></td>
-                    <td>{{a.createdAt|date('d-m-Y')}}</td>
-                </tr>
-            {% endfor %}
+            <tr>
+                <td>{{article.id}}</td>
+                <td>{{article.title}}</td>
+                <td>{{article.content}}</td>
+                <td>{{article.createdAt|date('d-m-Y')}}</td>
+            </tr>
         </tbody>
     </table>
 
